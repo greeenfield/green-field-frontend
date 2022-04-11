@@ -3,15 +3,14 @@ import * as svg from './svgs';
 
 type IconType = keyof typeof svg;
 
-interface IconProps {
+interface IconProps extends React.SVGAttributes<HTMLOrSVGElement> {
   name: IconType;
-  className?: string;
-  style?: React.CSSProperties;
 }
 
-export const Icon = ({ name, className, style }: IconProps) => {
+const Icon = ({ name, ...rest }: IconProps) => {
   return React.createElement(svg[name], {
-    className,
-    style,
+    ...rest,
   });
 };
+
+export default Icon;
