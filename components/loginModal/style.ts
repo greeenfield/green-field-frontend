@@ -17,7 +17,7 @@ export const SLoginModal = styled.div`
     background-color: ${COLOR.OPAQUE};
   }
 
-  .wrapper {
+  .modalWrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -31,7 +31,7 @@ export const SLoginModal = styled.div`
 
   .whiteBox {
     width: 30rem;
-    height: 30rem;
+    height: 33rem;
     background-color: #fff;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
 
@@ -100,6 +100,12 @@ export const SLoginModal = styled.div`
 
     input + input {
       margin-top: 1rem;
+    }
+
+    .errorMsg {
+      text-align: left;
+      padding: 0.5rem;
+      color: ${COLOR.RED[5]};
     }
   }
 
