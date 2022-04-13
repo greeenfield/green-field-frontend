@@ -1,21 +1,53 @@
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { COLOR } from 'styles/color';
 
-export const SLoginModal = styled.div`
+const openAnimation = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(300px) scale(0.75);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+  `;
+
+const closeAnimation = keyframes`
+  0% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(300px) scale(0.75);
+  }
+`;
+
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${COLOR.OPAQUE};
+`;
+
+export const SLoginModal = styled.div<{ visible: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: ${COLOR.OPAQUE};
-  }
+  ${(p) =>
+    p.visible
+      ? css`
+          animation: ${openAnimation} 0.2s;
+        `
+      : css`
+          animation: ${closeAnimation} 0.2s;
+        `}
 
   .modalWrapper {
     position: fixed;
