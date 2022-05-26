@@ -1,8 +1,7 @@
 import { Icon } from 'components/icon';
 import Link from 'next/link';
-import { useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { SLoginModal } from './style';
+import { SLoginModal } from './LoginModal.style';
 
 interface Inputs {
   email: string;

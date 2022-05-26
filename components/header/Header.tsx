@@ -2,7 +2,7 @@ import { Icon } from 'components/icon';
 import { LoginModal } from 'components/loginModal';
 import { useModal } from 'hooks/useModal';
 import Link from 'next/link';
-import { SHeader } from './style';
+import { SHeader } from './Header.style';
 
 interface HeaderProps {}
 
