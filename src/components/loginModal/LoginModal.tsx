@@ -1,4 +1,4 @@
-import { Icon } from 'components/icon';
+import { Icon } from '@components/icon';
 import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { SLoginModal, Overlay } from './LoginModal.style';

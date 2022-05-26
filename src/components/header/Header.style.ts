@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import { COLOR } from 'styles/color';
+import { COLOR } from '@styles/color';
 
-export const SHeader = styled.div`
+export const SHeader = styled.header`
   height: 3.375rem;
   padding: 0 1rem;
 

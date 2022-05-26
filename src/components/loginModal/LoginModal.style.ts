@@ -1,6 +1,6 @@
 import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { COLOR } from 'styles/color';
+import { COLOR } from '@styles/color';
 
 const openAnimation = keyframes`
   0% {
@@ -43,10 +43,10 @@ export const SLoginModal = styled.div<{ visible: boolean }>`
   ${(p) =>
     p.visible
       ? css`
-          animation: ${openAnimation} 0.2s;
+          animation: ${openAnimation} 0.2s forwards ease-in-out;
         `
       : css`
-          animation: ${closeAnimation} 0.2s;
+          animation: ${closeAnimation} 0.2s forwards ease-in-out;
         `}
 
   .modalWrapper {
