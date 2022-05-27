@@ -10,7 +10,7 @@ export const SHeader = styled.header`
   justify-content: center;
 
   .wrapper {
-    width: 1024px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
