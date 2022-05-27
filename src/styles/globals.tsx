@@ -138,6 +138,7 @@ export const globalStyles = (
         margin: 0;
         height: 100%;
         color: ${COLOR.BLACK};
+        font-size: 16px;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
           Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       }
