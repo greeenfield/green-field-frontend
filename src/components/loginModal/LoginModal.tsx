@@ -20,7 +20,7 @@ const LoginModal = ({ visible, onClose }: LoginModalProps) => {
     formState: { errors },
     reset,
   } = useForm<Inputs>();
-  const [close, setClose] = useState<boolean>(false);
+  const [close, setClose] = useState<boolean>(true);
 
   useEffect(() => {
     if (visible) {
