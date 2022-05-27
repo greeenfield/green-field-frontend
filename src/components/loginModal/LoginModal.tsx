@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { SLoginModal, Overlay } from './LoginModal.style';
 import { useEffect, useState } from 'react';
+import { Input } from '@components/input';
+import { Button } from '@components/button';
 
 interface Inputs {
   email: string;
@@ -58,12 +60,12 @@ const LoginModal = ({ visible, onClose }: LoginModalProps) => {
             <h1>로그인</h1>
 
             <form onSubmit={handleSubmit(onSubmit)}>
-              <input
+              <Input
                 type="email"
                 placeholder="이메일"
                 {...register('email', { required: true })}
               />
-              <input
+              <Input
                 type="password"
                 placeholder="비밀번호"
                 {...register('password', { required: true })}
@@ -74,7 +76,7 @@ const LoginModal = ({ visible, onClose }: LoginModalProps) => {
                   아이디 또는 패스워드를 입력해주세요.
                 </div>
               )}
-              <button type="submit">로그인</button>
+              <Button type="submit">로그인</Button>
             </form>
 
             <div className="footer">

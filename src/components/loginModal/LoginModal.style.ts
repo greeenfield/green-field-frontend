@@ -101,35 +101,6 @@ export const SLoginModal = styled.div<{ visible: boolean }>`
   }
 
   form {
-    input {
-      padding: 1rem;
-      font-size: 1.125rem;
-      border-radius: 0.5rem;
-      width: 100%;
-      outline: none;
-      border: 1px solid ${COLOR.GRAY[1]};
-      :focus {
-        border: 1px solid ${COLOR.PRIMARY};
-      }
-    }
-
-    button {
-      margin-top: 1.5rem;
-      padding: 0.75rem;
-      font-size: 1.125rem;
-      border-radius: 0.5rem;
-      width: 100%;
-      outline: none;
-      border: none;
-      color: #fff;
-      background-color: ${COLOR.PRIMARY};
-      cursor: pointer;
-
-      :hover {
-        background-color: ${COLOR.getHoverColor(COLOR.PRIMARY)};
-      }
-    }
-
     input + input {
       margin-top: 1rem;
     }
