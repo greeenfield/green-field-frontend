@@ -2,7 +2,7 @@ import { Button } from '@components/button';
 import { Input } from '@components/input';
 import classnames from 'classnames';
 import { useForm } from 'react-hook-form';
-import { SSignUpForm } from './SignUpForm.style';
+import * as S from './SignUpForm.style';
 
 interface SignupFormProps {}
 
@@ -32,9 +32,9 @@ const SignUpForm = ({}: SignupFormProps) => {
   });
 
   return (
-    <SSignUpForm onSubmit={onSubmit}>
-      <div className="form-field-group">
-        <div className="form-field">
+    <S.Wrapper onSubmit={onSubmit}>
+      <S.FormFieldGroup className="form-field-group">
+        <S.FormField>
           <label htmlFor="username">이름</label>
           <Input
             type="text"
@@ -50,10 +50,10 @@ const SignUpForm = ({}: SignupFormProps) => {
               maxLength: { value: 20, message: '1~20자 사이로 입력해주세요.' },
             })}
           />
-          <div className="form-error-field">{errors?.username?.message}</div>
-        </div>
+          <S.FormErrorField>{errors?.username?.message}</S.FormErrorField>
+        </S.FormField>
 
-        <div className="form-field">
+        <S.FormField>
           <label htmlFor="nickname">닉네임</label>
           <Input
             type="text"
@@ -69,11 +69,11 @@ const SignUpForm = ({}: SignupFormProps) => {
               maxLength: { value: 20, message: '1~20자 사이로 입력해주세요.' },
             })}
           />
-          <div className="form-error-field">{errors?.nickname?.message}</div>
-        </div>
-      </div>
+          <S.FormErrorField>{errors?.nickname?.message}</S.FormErrorField>
+        </S.FormField>
+      </S.FormFieldGroup>
 
-      <div className="form-field">
+      <S.FormField>
         <label htmlFor="email">이메일</label>
         <Input
           type="email"
@@ -87,10 +87,10 @@ const SignUpForm = ({}: SignupFormProps) => {
             },
           })}
         />
-        <div className="form-error-field">{errors?.email?.message}</div>
-      </div>
+        <S.FormErrorField>{errors?.email?.message}</S.FormErrorField>
+      </S.FormField>
 
-      <div className="form-field">
+      <S.FormField>
         <label htmlFor="password">비밀번호</label>
         <Input
           type="password"
@@ -107,13 +107,13 @@ const SignUpForm = ({}: SignupFormProps) => {
             maxLength: { value: 20, message: '8~20자 사이로 입력해주세요.' },
           })}
         />
-        <div className="form-error-field">{errors?.password?.message}</div>
-      </div>
+        <S.FormErrorField>{errors?.password?.message}</S.FormErrorField>
+      </S.FormField>
 
       <Button type="submit">가입하기</Button>
 
       {/* @todo: 이미 가입했는지 체크 -> 로그인 모달  */}
-    </SSignUpForm>
+    </S.Wrapper>
   );
 };
 

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { COLOR } from '@styles/color';
 
-export const SSignUpForm = styled.form`
+export const Wrapper = styled.form`
   label {
     display: block;
     font-size: 1.1rem;
@@ -15,20 +15,18 @@ export const SSignUpForm = styled.form`
       border: 1px solid ${COLOR.RED[4]};
     }
   }
+`;
 
-  .form-field-group {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .form-field {
-    flex: 1;
-    padding: 0.5rem 0;
-  }
-
-  .form-error-field {
-    height: 12px;
-    font-size: 0.75rem;
-    color: ${COLOR.RED[4]};
-  }
+export const FormFieldGroup = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+export const FormField = styled.div`
+  flex: 1;
+  padding: 0.5rem 0;
+`;
+export const FormErrorField = styled.div`
+  height: 12px;
+  font-size: 0.75rem;
+  color: ${COLOR.RED[4]};
 `;

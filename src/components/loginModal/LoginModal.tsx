@@ -1,7 +1,7 @@
 import { Icon } from '@components/icon';
 import Link from 'next/link';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { SLoginModal, Overlay } from './LoginModal.style';
+import * as S from './LoginModal.style';
 import { useEffect, useState } from 'react';
 import { Input } from '@components/input';
 import { Button } from '@components/button';
@@ -47,46 +47,46 @@ const LoginModal = ({ visible, onClose }: LoginModalProps) => {
 
   return (
     <>
-      <Overlay />
-      <SLoginModal visible={visible}>
-        <div className="modalWrapper">
-          <div className="whiteBox">
-            <div className="closeWrapper">
-              <Icon name="close" onClick={handleClose} />
-            </div>
-            <div className="logoWrapper">
-              <Icon name="logo" />
-            </div>
-            <h1>로그인</h1>
+      <S.Overlay />
+      <S.Wrapper visible={visible}>
+        <S.WhiteBox>
+          <S.CloseButtonWrapper>
+            <Icon name="close" onClick={handleClose} />
+          </S.CloseButtonWrapper>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <Input
-                type="email"
-                placeholder="이메일"
-                {...register('email', { required: true })}
-              />
-              <Input
-                type="password"
-                placeholder="비밀번호"
-                {...register('password', { required: true })}
-              />
+          <S.LogoWrapper>
+            <Icon name="logo" />
+          </S.LogoWrapper>
 
-              {(errors.email || errors.password) && (
-                <div className="errorMsg">
-                  아이디 또는 패스워드를 입력해주세요.
-                </div>
-              )}
-              <Button type="submit">로그인</Button>
-            </form>
+          <h1>로그인</h1>
 
-            <div className="footer">
-              <Link href="/signup">
-                <a onClick={handleClose}>회원가입</a>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </SLoginModal>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <Input
+              type="email"
+              placeholder="이메일"
+              {...register('email', { required: true })}
+            />
+            <Input
+              type="password"
+              placeholder="비밀번호"
+              {...register('password', { required: true })}
+            />
+
+            {(errors.email || errors.password) && (
+              <div className="errorMsg">
+                아이디 또는 패스워드를 입력해주세요.
+              </div>
+            )}
+            <Button type="submit">로그인</Button>
+          </form>
+
+          <S.Footer>
+            <Link href="/signup">
+              <a onClick={handleClose}>회원가입</a>
+            </Link>
+          </S.Footer>
+        </S.WhiteBox>
+      </S.Wrapper>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
-import { SButton } from './Button.style';
+import * as S from './Button.style';
 
 interface ButtonProps
   extends DetailedHTMLProps<
@@ -8,7 +8,7 @@ interface ButtonProps
   > {}
 
 const Button = ({ children, ...rest }: ButtonProps) => {
-  return <SButton {...rest}>{children}</SButton>;
+  return <S.Wrapper {...rest}>{children}</S.Wrapper>;
 };
 
 export default Button;

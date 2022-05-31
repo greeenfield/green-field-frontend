@@ -2,30 +2,28 @@ import { Icon } from '@components/icon';
 import { LoginModal } from '@components/loginModal';
 import { useModal } from '@hooks/useModal';
 import Link from 'next/link';
-import { SHeader } from './Header.style';
+import * as S from './Header.style';
 
 interface HeaderProps {}
 
 const Header = ({}: HeaderProps) => {
   const loginModalState = useModal();
   return (
-    <SHeader>
-      <div className="wrapper">
+    <S.Wrapper>
+      <S.InnerWrapper>
         <Link href={'/'}>
           <a>
             <Icon name="logo" className="logo" />
           </a>
         </Link>
 
-        <button className="loginButton" onClick={loginModalState.open}>
-          로그인
-        </button>
+        <S.LoginButton onClick={loginModalState.open}>로그인</S.LoginButton>
         <LoginModal
           visible={loginModalState.visible}
           onClose={loginModalState.close}
         />
-      </div>
-    </SHeader>
+      </S.InnerWrapper>
+    </S.Wrapper>
   );
 };
 

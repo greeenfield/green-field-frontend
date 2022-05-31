@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { COLOR } from '@styles/color';
 
-export const SHeader = styled.header`
+export const Wrapper = styled.header`
   height: 3.375rem;
   padding: 0 1rem;
 
@@ -9,30 +9,30 @@ export const SHeader = styled.header`
   align-items: center;
   justify-content: center;
 
-  .wrapper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
   .logo {
     width: 126px;
   }
+`;
 
-  .loginButton {
-    height: 2rem;
-    padding: 0 1rem;
-    background-color: ${COLOR.PRIMARY};
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
+export const InnerWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
-    color: #fff;
-    font-weight: bold;
+export const LoginButton = styled.button`
+  height: 2rem;
+  padding: 0 1rem;
+  background-color: ${COLOR.PRIMARY};
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
 
-    :hover {
-      background-color: ${COLOR.getHoverColor(COLOR.PRIMARY)};
-    }
+  color: #fff;
+  font-weight: bold;
+
+  :hover {
+    background-color: ${COLOR.getHoverColor(COLOR.PRIMARY)};
   }
 `;

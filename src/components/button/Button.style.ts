@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { COLOR } from '@styles/color';
 
-export const SButton = styled.button`
+export const Wrapper = styled.button`
   margin-top: 1.5rem;
   padding: 0.75rem;
   font-size: 1.125rem;

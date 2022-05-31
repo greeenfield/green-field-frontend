@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { COLOR } from '@styles/color';
 
-export const SInput = styled.input`
+export const Wrapper = styled.input`
   padding: 1rem;
   font-size: 1.125rem;
   border-radius: 0.5rem;

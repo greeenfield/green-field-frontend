@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const SLayout = styled.main`
+export const Wrapper = styled.main`
   max-width: 768px;
   min-width: 320px;
 
