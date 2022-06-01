@@ -1,4 +1,3 @@
-import { Icon } from '@components/icon';
 import { LoginModal } from '@components/loginModal';
 import { useModal } from '@hooks/useModal';
 import Image from 'next/image';
