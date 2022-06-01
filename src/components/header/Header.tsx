@@ -1,8 +1,10 @@
 import { Icon } from '@components/icon';
 import { LoginModal } from '@components/loginModal';
 import { useModal } from '@hooks/useModal';
+import Image from 'next/image';
 import Link from 'next/link';
 import * as S from './Header.style';
+import logo from 'public/assets/logo.png';
 
 interface HeaderProps {}
 
@@ -13,7 +15,7 @@ const Header = ({}: HeaderProps) => {
       <S.InnerWrapper>
         <Link href={'/'}>
           <a>
-            <Icon name="logo" className="logo" />
+            <Image src={logo} width={128} height={32} alt="logo" />
           </a>
         </Link>
 
