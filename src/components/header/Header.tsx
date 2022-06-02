@@ -14,7 +14,12 @@ const Header = ({}: HeaderProps) => {
       <S.InnerWrapper>
         <Link href={'/'}>
           <a>
-            <Image src={logo} width={128} height={32} alt="logo" />
+            <Image
+              src={logo}
+              width={logo.width / 2}
+              height={logo.height / 2}
+              alt="logo"
+            />
           </a>
         </Link>
 
