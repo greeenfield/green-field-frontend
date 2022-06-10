@@ -1,7 +1,12 @@
+import { useRouter } from 'next/router';
+import { useForm } from 'react-hook-form';
+
+import classnames from 'classnames';
+
 import { Button } from '@components/button';
 import { Input } from '@components/input';
-import classnames from 'classnames';
-import { useForm } from 'react-hook-form';
+import { useAuth } from '@hooks/useAuth';
+
 import * as S from './SignUpForm.style';
 
 interface SignupFormProps {}
@@ -27,8 +32,14 @@ const SignUpForm = ({}: SignupFormProps) => {
     },
   });
 
-  const onSubmit = handleSubmit((data) => {
-    console.log(data);
+  const { signup, loading, errorMsg } = useAuth();
+  const router = useRouter();
+
+  const onSubmit = handleSubmit(async (data) => {
+    const isSuccess = await signup(data);
+    if (isSuccess) {
+      router.push('/');
+    }
   });
 
   return (
@@ -110,7 +121,11 @@ const SignUpForm = ({}: SignupFormProps) => {
         <S.FormErrorField>{errors?.password?.message}</S.FormErrorField>
       </S.FormField>
 
-      <Button type="submit">가입하기</Button>
+      <Button type="submit" isLoading={loading}>
+        가입하기
+      </Button>
+
+      <p>{errorMsg}</p>
 
       {/* @todo: 이미 가입했는지 체크 -> 로그인 모달  */}
     </S.Wrapper>
