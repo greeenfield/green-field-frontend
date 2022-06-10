@@ -11,24 +11,42 @@ export const useAuth = () => {
   const [errorMsg, setErrorMsg] = useState<string>();
   const [, setUserState] = useUserState();
 
-  const login = async (data: authApi.LoginResponseData) => {
+  const signup = async (data: authApi.SignUpResponseData): Promise<boolean> => {
+    try {
+      setLoading(true);
+      await authApi.signup(data);
+      setErrorMsg(undefined);
+      return true;
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        setErrorMsg(error.response?.data.message);
+      }
+      return false;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const login = async (data: authApi.LoginResponseData): Promise<boolean> => {
     try {
       setLoading(true);
       await authApi.login(data);
       const user = await userApi.getMe();
       setUserState(user);
       setErrorMsg(undefined);
+      return true;
     } catch (error) {
       console.error(error);
       if (error instanceof AxiosError) {
         setErrorMsg(error.response?.data.message);
       }
+      return false;
     } finally {
       setLoading(false);
     }
   };
 
-  const logout = async () => {
+  const logout = async (): Promise<void> => {
     try {
       setLoading(true);
       await authApi.logout();
@@ -46,6 +64,7 @@ export const useAuth = () => {
   return {
     loading,
     errorMsg,
+    signup,
     login,
     logout,
   };
