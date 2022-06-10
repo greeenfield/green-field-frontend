@@ -39,6 +39,7 @@ export const Wrapper = styled.div<{ visible: boolean }>`
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +100,7 @@ export const LogoWrapper = styled.div`
   text-align: center;
   padding: 1.25rem 0;
 
-  svg {
+  img {
     width: 186px;
   }
 `;
