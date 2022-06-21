@@ -21,6 +21,10 @@ export const InnerWrapper = styled.div`
   justify-content: space-between;
 `;
 
+export const Right = styled.div`
+  position: relative;
+`;
+
 export const LoginButton = styled.button`
   height: 2rem;
   padding: 0 1rem;
