@@ -140,8 +140,9 @@ export const globalStyles = (
         height: 100%;
         color: ${COLOR.BLACK};
         font-size: 16px;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-family: Pretendard -apple-system, BlinkMacSystemFont, Segoe UI,
+          Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+          Helvetica Neue, sans-serif;
       }
 
       a {
@@ -151,6 +152,12 @@ export const globalStyles = (
 
       * {
         box-sizing: border-box;
+      }
+
+      input,
+      button,
+      textarea {
+        font-family: inherit;
       }
     `}
   />
