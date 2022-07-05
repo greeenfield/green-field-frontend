@@ -16,8 +16,9 @@ const UserMenuDropdown = ({ visible, onClose }: Props) => {
   const { logout } = useAuth();
   useOnClickOutside(ref, () => onClose());
 
-  const onClickLogout = () => {
-    logout();
+  const onClickLogout = async () => {
+    await logout();
+    onClose();
   };
 
   if (!visible) return null;
