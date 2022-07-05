@@ -1,8 +1,12 @@
-import dayjs from 'dayjs';
 import Image from 'next/image';
-import heart from 'public/assets/heart.png';
+
+import dayjs from 'dayjs';
+
 import { Note } from '@models/note';
-import * as S from './MainNote.style';
+
+import * as Styled from './MainNote.style';
+
+import heart from 'public/assets/heart.png';
 
 interface MainNoteProps {
   note: Note;
@@ -10,32 +14,32 @@ interface MainNoteProps {
 
 const MainNote = ({ note }: MainNoteProps) => {
   return (
-    <S.Wrapper>
-      <S.Header>
-        <S.Avatar>
+    <Styled.Wrapper>
+      <Styled.Header>
+        <Styled.Avatar>
           <img src={note.user.thumbnail} alt="avatar" />
-        </S.Avatar>
+        </Styled.Avatar>
 
-        <S.UserName>{note.user.username}</S.UserName>
-      </S.Header>
+        <Styled.UserName>{note.user.username}</Styled.UserName>
+      </Styled.Header>
       {note.thumbnail && (
-        <S.Thumbnail>
+        <Styled.Thumbnail>
           <img src={note.thumbnail} alt="thumb" />
-        </S.Thumbnail>
+        </Styled.Thumbnail>
       )}
-      {note.url_meta && <S.UrlMeta></S.UrlMeta>}
-      <S.Content>
-        <S.Title>{note.title}</S.Title>
-        <S.Desc>{note.short_description}</S.Desc>
-      </S.Content>
-      <S.Footer>
-        <S.Date>{dayjs(note.updated_at).fromNow()}</S.Date>
-        <S.Likes>
+      {note.url_meta && <Styled.UrlMeta></Styled.UrlMeta>}
+      <Styled.Content>
+        <Styled.Title>{note.title}</Styled.Title>
+        <Styled.Desc>{note.short_description}</Styled.Desc>
+      </Styled.Content>
+      <Styled.Footer>
+        <Styled.Date>{dayjs(note.updated_at).fromNow()}</Styled.Date>
+        <Styled.Likes>
           <Image src={heart} width={16} height={16} alt="heart" />
           {note.likes}
-        </S.Likes>
-      </S.Footer>
-    </S.Wrapper>
+        </Styled.Likes>
+      </Styled.Footer>
+    </Styled.Wrapper>
   );
 };
 

@@ -8,7 +8,7 @@ import { Icon } from '@components/icon';
 import { Input } from '@components/input';
 import { useAuth } from '@hooks/useAuth';
 
-import * as S from './LoginModal.style';
+import * as Styled from './LoginModal.style';
 
 import logo from 'public/assets/logo.png';
 
@@ -66,21 +66,21 @@ const LoginModal = ({ visible, onClose }: LoginModalProps) => {
 
   return (
     <>
-      <S.Overlay />
-      <S.Wrapper visible={visible}>
-        <S.WhiteBox>
-          <S.CloseButtonWrapper>
+      <Styled.Overlay />
+      <Styled.Wrapper visible={visible}>
+        <Styled.WhiteBox>
+          <Styled.CloseButtonWrapper>
             <Icon name="close" onClick={handleClose} />
-          </S.CloseButtonWrapper>
+          </Styled.CloseButtonWrapper>
 
-          <S.LogoWrapper>
+          <Styled.LogoWrapper>
             <Image
               src={logo}
               width={logo.width / 1.5}
               height={logo.height / 1.5}
               alt="logo"
             />
-          </S.LogoWrapper>
+          </Styled.LogoWrapper>
 
           <h1>로그인</h1>
 
@@ -102,13 +102,13 @@ const LoginModal = ({ visible, onClose }: LoginModalProps) => {
             </Button>
           </form>
 
-          <S.Footer>
+          <Styled.Footer>
             <Link href="/signup">
               <a onClick={handleClose}>회원가입</a>
             </Link>
-          </S.Footer>
-        </S.WhiteBox>
-      </S.Wrapper>
+          </Styled.Footer>
+        </Styled.WhiteBox>
+      </Styled.Wrapper>
     </>
   );
 };

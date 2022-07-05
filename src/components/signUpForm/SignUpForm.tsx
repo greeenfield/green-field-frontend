@@ -7,7 +7,7 @@ import { Button } from '@components/button';
 import { Input } from '@components/input';
 import { useAuth } from '@hooks/useAuth';
 
-import * as S from './SignUpForm.style';
+import * as Styled from './SignUpForm.style';
 
 interface SignupFormProps {}
 
@@ -43,9 +43,9 @@ const SignUpForm = ({}: SignupFormProps) => {
   });
 
   return (
-    <S.Wrapper onSubmit={onSubmit}>
-      <S.FormFieldGroup className="form-field-group">
-        <S.FormField>
+    <Styled.Wrapper onSubmit={onSubmit}>
+      <Styled.FormFieldGroup className="form-field-group">
+        <Styled.FormField>
           <label htmlFor="username">이름</label>
           <Input
             type="text"
@@ -61,10 +61,12 @@ const SignUpForm = ({}: SignupFormProps) => {
               maxLength: { value: 20, message: '1~20자 사이로 입력해주세요.' },
             })}
           />
-          <S.FormErrorField>{errors?.username?.message}</S.FormErrorField>
-        </S.FormField>
+          <Styled.FormErrorField>
+            {errors?.username?.message}
+          </Styled.FormErrorField>
+        </Styled.FormField>
 
-        <S.FormField>
+        <Styled.FormField>
           <label htmlFor="nickname">닉네임</label>
           <Input
             type="text"
@@ -80,11 +82,13 @@ const SignUpForm = ({}: SignupFormProps) => {
               maxLength: { value: 20, message: '1~20자 사이로 입력해주세요.' },
             })}
           />
-          <S.FormErrorField>{errors?.nickname?.message}</S.FormErrorField>
-        </S.FormField>
-      </S.FormFieldGroup>
+          <Styled.FormErrorField>
+            {errors?.nickname?.message}
+          </Styled.FormErrorField>
+        </Styled.FormField>
+      </Styled.FormFieldGroup>
 
-      <S.FormField>
+      <Styled.FormField>
         <label htmlFor="email">이메일</label>
         <Input
           type="email"
@@ -98,10 +102,10 @@ const SignUpForm = ({}: SignupFormProps) => {
             },
           })}
         />
-        <S.FormErrorField>{errors?.email?.message}</S.FormErrorField>
-      </S.FormField>
+        <Styled.FormErrorField>{errors?.email?.message}</Styled.FormErrorField>
+      </Styled.FormField>
 
-      <S.FormField>
+      <Styled.FormField>
         <label htmlFor="password">비밀번호</label>
         <Input
           type="password"
@@ -118,8 +122,10 @@ const SignUpForm = ({}: SignupFormProps) => {
             maxLength: { value: 20, message: '8~20자 사이로 입력해주세요.' },
           })}
         />
-        <S.FormErrorField>{errors?.password?.message}</S.FormErrorField>
-      </S.FormField>
+        <Styled.FormErrorField>
+          {errors?.password?.message}
+        </Styled.FormErrorField>
+      </Styled.FormField>
 
       <Button type="submit" isLoading={loading}>
         가입하기
@@ -128,7 +134,7 @@ const SignUpForm = ({}: SignupFormProps) => {
       <p>{errorMsg}</p>
 
       {/* @todo: 이미 가입했는지 체크 -> 로그인 모달  */}
-    </S.Wrapper>
+    </Styled.Wrapper>
   );
 };
 

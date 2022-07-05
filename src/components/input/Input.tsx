@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, forwardRef, InputHTMLAttributes } from 'react';
 
-import * as S from './Input.style';
+import * as Styled from './Input.style';
 
 interface InputProps
   extends DetailedHTMLProps<
@@ -12,7 +12,7 @@ const Input = (
   props: InputProps,
   ref: React.ForwardedRef<HTMLInputElement>
 ) => {
-  return <S.Wrapper ref={ref} {...props} />;
+  return <Styled.Wrapper ref={ref} {...props} />;
 };
 
 export default forwardRef(Input);

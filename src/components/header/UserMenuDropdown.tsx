@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { useAuth } from '@hooks/useAuth';
 import { useOnClickOutside } from '@hooks/useOnClickOutside';
 
-import * as S from './UserMenuDropdown.style';
+import * as Styled from './UserMenuDropdown.style';
 
 interface Props {
   visible: boolean;
@@ -23,14 +23,16 @@ const UserMenuDropdown = ({ visible, onClose }: Props) => {
 
   if (!visible) return null;
   return (
-    <S.Wrapper ref={ref}>
-      <S.DropDownItem>
+    <Styled.Wrapper ref={ref}>
+      <Styled.DropDownItem>
         <Link href="/write">
           <a>노트 작성</a>
         </Link>
-      </S.DropDownItem>
-      <S.DropDownItem onClick={onClickLogout}>로그아웃</S.DropDownItem>
-    </S.Wrapper>
+      </Styled.DropDownItem>
+      <Styled.DropDownItem onClick={onClickLogout}>
+        로그아웃
+      </Styled.DropDownItem>
+    </Styled.Wrapper>
   );
 };
 

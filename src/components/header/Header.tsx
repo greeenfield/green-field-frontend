@@ -7,7 +7,7 @@ import { useUserState } from '@atoms/userState';
 import { LoginModal } from '@components/loginModal';
 import { useModal } from '@hooks/useModal';
 
-import * as S from './Header.style';
+import * as Styled from './Header.style';
 import UserMenuDropdown from './UserMenuDropdown';
 
 import logo from 'public/assets/logo.png';
@@ -26,8 +26,8 @@ const Header = ({}: HeaderProps) => {
   }, [router.pathname]);
 
   return (
-    <S.Wrapper>
-      <S.InnerWrapper>
+    <Styled.Wrapper>
+      <Styled.InnerWrapper>
         {/* left */}
         <Link href={'/'}>
           <a>
@@ -40,7 +40,7 @@ const Header = ({}: HeaderProps) => {
           </a>
         </Link>
 
-        <S.Right>
+        <Styled.Right>
           {user ? (
             <>
               <div onClick={userMenu.open}>{user.username}</div>
@@ -51,14 +51,16 @@ const Header = ({}: HeaderProps) => {
             </>
           ) : (
             !isSignUpPage && (
-              <S.LoginButton onClick={loginModal.open}>로그인</S.LoginButton>
+              <Styled.LoginButton onClick={loginModal.open}>
+                로그인
+              </Styled.LoginButton>
             )
           )}
 
           <LoginModal visible={loginModal.visible} onClose={loginModal.close} />
-        </S.Right>
-      </S.InnerWrapper>
-    </S.Wrapper>
+        </Styled.Right>
+      </Styled.InnerWrapper>
+    </Styled.Wrapper>
   );
 };
 

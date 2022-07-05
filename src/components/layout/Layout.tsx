@@ -1,4 +1,4 @@
-import * as S from './Layout.style';
+import * as Styled from './Layout.style';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -6,9 +6,9 @@ interface LayoutProps {
 /** @todo 페이지에 따라 header 컨트롤 필요 */
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <S.Wrapper>
-      <S.MainWrapper>{children}</S.MainWrapper>
-    </S.Wrapper>
+    <Styled.Wrapper>
+      <Styled.MainWrapper>{children}</Styled.MainWrapper>
+    </Styled.Wrapper>
   );
 };
 
