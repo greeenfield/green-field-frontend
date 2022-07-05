@@ -1,16 +1,22 @@
 import { ChangeEvent, useRef, useState } from 'react';
+import { useMutation } from 'react-query';
 
+import * as noteApi from '@apis/note';
 import { Icon } from '@components/icon';
-import { useUploadQuery } from '@hooks/useUploadQuery';
 
 import * as Styled from './ThumbnailUploader.style';
 
 const ThumbnailUploader = () => {
   const [thumbUrl, setThumbmUrl] = useState<string>('');
-  const { mutate, isLoading } = useUploadQuery();
+  const { mutate, isLoading } = useMutation(async (data: FormData) =>
+    noteApi.uploadThumbnail(data)
+  );
+
   const thumbnailInputRef = useRef<HTMLInputElement>(null);
 
-  const foo = ({ currentTarget: { files } }: ChangeEvent<HTMLInputElement>) => {
+  const uploadThumbnail = ({
+    currentTarget: { files },
+  }: ChangeEvent<HTMLInputElement>) => {
     if (!files?.length) return;
     const imgFile = files[0];
     const formData = new FormData();
@@ -50,7 +56,7 @@ const ThumbnailUploader = () => {
       </Styled.ThumbnailUploadButton>
       <Styled.ThumbnailInput
         ref={thumbnailInputRef}
-        onChange={foo}
+        onChange={uploadThumbnail}
         type="file"
         accept="image/*"
       />
