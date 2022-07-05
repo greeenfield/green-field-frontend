@@ -1,4 +1,3 @@
-import { Header } from '@components/header';
 import * as S from './Layout.style';
 
 interface LayoutProps {
@@ -8,7 +7,6 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <S.Wrapper>
-      <Header />
       <S.MainWrapper>{children}</S.MainWrapper>
     </S.Wrapper>
   );
