@@ -16,13 +16,7 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@apis/*": ["src/apis/*"],
-      "@atoms/*": ["src/atoms/*"],
-      "@components/*": ["src/components/*"],
-      "@constants/*": ["src/constants/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@styles/*": ["src/styles/*"],
-      "@models/*": ["src/models/*"]
+      "@/*": ["src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js"],
