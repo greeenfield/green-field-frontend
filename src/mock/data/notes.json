@@ -1,0 +1,93 @@
+[
+  {
+    "id": "1",
+    "title": "NextJS 파헤치기",
+    "likes": 13,
+    "thumbnail": "https://placeimg.com/400/300/any",
+    "user": {
+      "id": "",
+      "username": "curlyjun",
+      "thumbnail": "https://placeimg.com/64/64/any"
+    },
+    "tags": ["nextjs", "react"],
+    "updatedAt": "Tue Jul 19 2022 16:48:48 GMT+0900 (한국 표준시)"
+  },
+  {
+    "id": "2",
+    "title": "NextJS 파헤치기",
+    "likes": 13,
+    "thumbnail": "https://placeimg.com/400/300/any",
+    "user": {
+      "id": "",
+      "username": "curlyjun",
+      "thumbnail": "https://placeimg.com/64/64/any"
+    },
+    "tags": ["nextjs", "react"],
+    "updatedAt": "Tue Jul 19 2022 16:48:48 GMT+0900 (한국 표준시)"
+  },
+  {
+    "id": "3",
+    "title": "NextJS 파헤치기",
+    "likes": 13,
+    "thumbnail": "https://placeimg.com/400/300/any",
+    "user": {
+      "id": "",
+      "username": "curlyjun",
+      "thumbnail": "https://placeimg.com/64/64/any"
+    },
+    "tags": ["nextjs", "react"],
+    "updatedAt": "Tue Jul 19 2022 16:48:48 GMT+0900 (한국 표준시)"
+  },
+  {
+    "id": "4",
+    "title": "NextJS 파헤치기",
+    "likes": 13,
+    "thumbnail": "https://placeimg.com/400/300/any",
+    "user": {
+      "id": "",
+      "username": "curlyjun",
+      "thumbnail": "https://placeimg.com/64/64/any"
+    },
+    "tags": ["nextjs", "react"],
+    "updatedAt": "Tue Jul 19 2022 16:48:48 GMT+0900 (한국 표준시)"
+  },
+  {
+    "id": "5",
+    "title": "NextJS 파헤치기",
+    "likes": 13,
+    "thumbnail": "https://placeimg.com/400/300/any",
+    "user": {
+      "id": "",
+      "username": "curlyjun",
+      "thumbnail": "https://placeimg.com/64/64/any"
+    },
+    "tags": ["nextjs", "react"],
+    "updatedAt": "Tue Jul 19 2022 16:48:48 GMT+0900 (한국 표준시)"
+  },
+  {
+    "id": "6",
+    "title": "NextJS 파헤치기",
+    "likes": 13,
+    "thumbnail": "https://placeimg.com/400/300/any",
+    "user": {
+      "id": "",
+      "username": "curlyjun",
+      "thumbnail": "https://placeimg.com/64/64/any"
+    },
+    "tags": ["nextjs", "react"],
+    "updatedAt": "Tue Jul 19 2022 16:48:48 GMT+0900 (한국 표준시)"
+  },
+  {
+    "id": "7",
+    "title": "NextJS 파헤치기",
+    "likes": 13,
+    "thumbnail": "https://placeimg.com/400/300/any",
+    "user": {
+      "id": "",
+      "username": "curlyjun",
+      "thumbnail": "https://placeimg.com/64/64/any"
+    },
+    "tags": ["nextjs", "react"],
+    "updatedAt": "Tue Jul 19 2022 16:48:48 GMT+0900 (한국 표준시)"
+  }
+]
