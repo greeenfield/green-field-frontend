@@ -1,4 +1,4 @@
-import { WriteTemplate } from '@components/writeTemplate';
+import { WriteTemplate } from '@/components/writeTemplate';
 
 interface WriteProps {}
 

@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import { AxiosError } from 'axios';
 
-import * as authApi from '@apis/auth';
-import * as userApi from '@apis/user';
-import { useUserState } from '@atoms/userState';
+import * as authApi from '@/apis/auth';
+import * as userApi from '@/apis/user';
+import { useUserState } from '@/atoms/userState';
 
 export const useAuth = () => {
   const [loading, setLoading] = useState<boolean>(false);

@@ -1,11 +1,10 @@
 import { useRouter } from 'next/router';
-import { useForm } from 'react-hook-form';
-
-import classnames from 'classnames';
 
 import { Button } from '@components/button';
 import { Input } from '@components/input';
 import { useAuth } from '@hooks/useAuth';
+import classnames from 'classnames';
+import { useForm } from 'react-hook-form';
 
 import * as Styled from './SignUpForm.style';
 

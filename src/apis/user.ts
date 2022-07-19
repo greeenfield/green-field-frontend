@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { User } from '@models/user';
+import { User } from '@/models/user';
 
 export const getMe = async (cookie?: string) => {
   try {

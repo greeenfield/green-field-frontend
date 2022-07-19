@@ -1,8 +1,9 @@
 import { ChangeEvent, useRef, useState } from 'react';
+
 import { useMutation } from 'react-query';
 
-import * as noteApi from '@apis/note';
-import { Icon } from '@components/icon';
+import * as noteApi from '@/apis/note';
+import { Icon } from '@/components/icon';
 
 import * as Styled from './ThumbnailUploader.style';
 

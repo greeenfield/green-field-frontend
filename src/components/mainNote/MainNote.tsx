@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import dayjs from 'dayjs';
 
-import { Note } from '@models/note';
+import { Note } from '@/models/note';
 
 import * as Styled from './MainNote.style';
 

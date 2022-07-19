@@ -1,20 +1,20 @@
-import type { AppContext, AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useState } from 'react';
-import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 
 import axios from 'axios';
 import dayjs from 'dayjs';
 import ko from 'dayjs/locale/ko';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 import { RecoilRoot } from 'recoil';
 
-import { getMe } from '@apis/user';
-import { userState } from '@atoms/userState';
-import { Layout } from '@components/layout';
-import { globalStyles } from '@styles/globals';
+import { userState } from '@/atoms/userState';
+import { API_SERVER_URL } from '@/mock/handlers';
+import { globalStyles } from '@/styles/globals';
 
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = API_SERVER_URL;
 axios.defaults.withCredentials = true;
 
 dayjs.locale(ko);
@@ -36,27 +36,12 @@ function MyApp({ Component, pageProps }: AppProps) {
             set(userState, pageProps.user);
           }}
         >
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <Component {...pageProps} />
         </RecoilRoot>
       </Hydrate>
+      <ReactQueryDevtools initialIsOpen={true} />
     </QueryClientProvider>
   );
 }
-
-MyApp.getInitialProps = async ({ ctx }: AppContext) => {
-  let user = null;
-  if (ctx.req) {
-    user = await getMe(ctx.req.headers.cookie);
-  } else {
-    user = await getMe();
-  }
-  return {
-    pageProps: {
-      user: user,
-    },
-  };
-};
 
 export default MyApp;

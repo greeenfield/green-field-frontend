@@ -1,6 +1,6 @@
 import { atom, useRecoilState } from 'recoil';
 
-import { User } from '@models/user';
+import { User } from '@/models/user';
 
 export const userState = atom<User | null>({
   key: 'userState',

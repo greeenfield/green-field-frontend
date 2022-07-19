@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import { Button } from '@components/button';
-import { Icon } from '@components/icon';
-import { Input } from '@components/input';
-import { useAuth } from '@hooks/useAuth';
+import { Button } from '@/components/button';
+import { Icon } from '@/components/icon';
+import { Input } from '@/components/input';
+import { useAuth } from '@/hooks/useAuth';
 
 import * as Styled from './LoginModal.style';
 

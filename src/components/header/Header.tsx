@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useMemo } from 'react';
 
-import { useUserState } from '@atoms/userState';
-import { LoginModal } from '@components/loginModal';
-import { useModal } from '@hooks/useModal';
+import { useUserState } from '@/atoms/userState';
+import { LoginModal } from '@/components/loginModal';
+import { useModal } from '@/hooks/useModal';
 
 import * as Styled from './Header.style';
 import UserMenuDropdown from './UserMenuDropdown';

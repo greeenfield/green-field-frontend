@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useRef } from 'react';
 
-import { useAuth } from '@hooks/useAuth';
-import { useOnClickOutside } from '@hooks/useOnClickOutside';
+import { useAuth } from '@/hooks/useAuth';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 
 import * as Styled from './UserMenuDropdown.style';
 

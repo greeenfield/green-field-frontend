@@ -1,6 +1,7 @@
 import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { COLOR } from '@styles/color';
+
+import { COLOR } from '@/styles/color';
 
 export const Wrapper = styled.button`
   display: flex;

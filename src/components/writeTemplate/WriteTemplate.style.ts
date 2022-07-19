@@ -1,7 +1,6 @@
-import ReactTextareaAutosize from 'react-textarea-autosize';
-
 import styled from '@emotion/styled';
 import { COLOR } from '@styles/color';
+import ReactTextareaAutosize from 'react-textarea-autosize';
 
 export const Wrapper = styled.div`
   padding: 5rem;

@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
-import { Icon } from '@components/icon';
+import { Icon } from '@/components/icon';
 
 import * as S from './Button.style';
 
