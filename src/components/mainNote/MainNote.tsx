@@ -16,11 +16,7 @@ const MainNote = ({ note }: MainNoteProps) => {
   return (
     <Styled.Wrapper>
       <Styled.Header>
-        <Styled.Avatar>
-          <img src={note.user.thumbnail} alt="avatar" />
-        </Styled.Avatar>
-
-        <Styled.UserName>{note.user.username}</Styled.UserName>
+        <Styled.Title>{note.title}</Styled.Title>
       </Styled.Header>
       {note.thumbnail && (
         <Styled.Thumbnail>
@@ -28,12 +24,14 @@ const MainNote = ({ note }: MainNoteProps) => {
         </Styled.Thumbnail>
       )}
       {note.url_meta && <Styled.UrlMeta></Styled.UrlMeta>}
-      <Styled.Content>
-        <Styled.Title>{note.title}</Styled.Title>
-        <Styled.Desc>{note.short_description}</Styled.Desc>
-      </Styled.Content>
+      <Styled.Desc>{note.short_description}</Styled.Desc>
+      <Styled.Date>{dayjs(note.updated_at).toNow()}</Styled.Date>
+
       <Styled.Footer>
-        <Styled.Date>{dayjs(note.updated_at).fromNow()}</Styled.Date>
+        <Styled.UserWrapper>
+          <img src={note.user.thumbnail} alt="avatar" />
+          <Styled.UserName>{note.user.username}</Styled.UserName>
+        </Styled.UserWrapper>
         <Styled.Likes>
           <Image src={heart} width={16} height={16} alt="heart" />
           {note.likes}
