@@ -20,12 +20,18 @@ const MainNote = ({ note }: MainNoteProps) => {
       </Styled.Header>
       {note.thumbnail && (
         <Styled.Thumbnail>
-          <img src={note.thumbnail} alt="thumb" />
+          <Image
+            src={note.thumbnail}
+            alt="thumbnail-img"
+            layout="responsive"
+            width={400}
+            height={300}
+          />
         </Styled.Thumbnail>
       )}
       {note.url_meta && <Styled.UrlMeta></Styled.UrlMeta>}
       <Styled.Desc>{note.short_description}</Styled.Desc>
-      <Styled.Date>{dayjs(note.updated_at).toNow()}</Styled.Date>
+      <Styled.Date>{dayjs(note.updated_at).fromNow()}</Styled.Date>
 
       <Styled.Footer>
         <Styled.UserWrapper>

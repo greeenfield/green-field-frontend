@@ -34,10 +34,7 @@ export const UserName = styled.div`
 
 export const Thumbnail = styled.div`
   img {
-    width: 100%;
     border-radius: 1rem;
-    height: 180px;
-    object-fit: cover;
   }
 `;
 export const UrlMeta = styled.div``;
